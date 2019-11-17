@@ -1,0 +1,44 @@
+@import "variables";
+
+/*  CSS Custom Properties  --> background-color: var(--blue_l); */
+/*  SASS Variables  --> background-color: $blue_l; */
+
+@mixin my-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: $fs_m;
+    padding: 10px 20px;
+    background-color: $blue_l;
+    
+    @include xs-screen{
+        background: $blue_d;  
+    }
+} 
+
+@mixin my-main{   
+    height: calc(100vh - 180px);
+    font-size: $fs_m;
+    padding: 10px 20px;
+    background-color: $white;
+} 
+
+@mixin my-footer{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 80px;  
+    padding: 10px 20px;
+    background-color: $blue_d;
+    font-size: $fs_m;
+    color: $white; 
+
+    @include xs-screen{
+        p{
+            font-size: $fs_s;
+            background: $blue_l;                   
+        }
+    }
+} 
+
